@@ -6,3 +6,5 @@ from django.http import HttpResponse
 def helloworld(request):
     return HttpResponse('Hello World<br>I´m testing this method')
 
+def secondview(request ):
+    return HttpResponse('Second View')
