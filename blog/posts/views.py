@@ -5,7 +5,7 @@ from django.http import HttpResponse
 posts = [
     {
         'id':0,
-        'title': 'Let\'s explore python',
+        'title': 'Let\'s explore Python',
         'content': 'lorem ipsum'
     },
     {
