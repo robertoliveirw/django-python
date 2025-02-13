@@ -23,8 +23,15 @@ posts = [
 def helloworld(request):
     return HttpResponse('<h1>Hello World </h1> <br>I´m testing this method')
 
-def secondview(request):
-    return HttpResponse('Second View')
+def home(request):
+    html = ' '
+    for post in posts:
+        html += f'''
+            <div>
+                <h1>{post['id']} - {post['title']}<\h1>
+                <p>{post['content']}<\p>
+            <\div>'''
+    return HttpResponse(html)
 
 def post(request, id):
     return HttpResponse(id)
