@@ -38,8 +38,8 @@ def post(request, id):
         if post['id'] == id:
             post_dict = post
             break
-        html = f'''
-            <h1>{post_dict['title']}</h1>
-            <p>{post_dict['content']}</p>
-        '''
+    html = f'''
+        <h1>{post_dict['title']}</h1>
+        <p>{post_dict['content']}</p>
+    '''
     return HttpResponse(html)
