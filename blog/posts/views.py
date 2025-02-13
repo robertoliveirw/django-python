@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def helloworld(request):
-    return HttpResponse('Hello World<br>I´m testing this method')
+    return HttpResponse('<h1>Hello World<h1><br>I´m testing this method')
 
 def secondview(request ):
     return HttpResponse('Second View')
