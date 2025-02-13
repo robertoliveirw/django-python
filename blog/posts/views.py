@@ -5,7 +5,7 @@ from django.http import HttpResponse
 posts = [
     {
         'id':0,
-        'title': 'Let\'s explore Python',
+        'title': 'Let\'s explore Py thon',
         'content': 'lorem ipsum'
     },
     {
@@ -34,4 +34,12 @@ def home(request):
     return HttpResponse(html)
 
 def post(request, id):
-    return HttpResponse(id)
+    for post in posts: 
+        if post['id'] == id:
+            post_dict = post
+            break
+        html = f'''
+            <h1>{post_dict['title']}</h1>
+            <p>{post_dict['content']}</p>
+        '''
+    return HttpResponse(html)
